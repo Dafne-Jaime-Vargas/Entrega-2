@@ -16,5 +16,6 @@ Esta entrega se basa en la encuenta CEP N°83 de Mayo del 2019.
 Las cuentas Github asociadas donde se puede encontrar el proyecto son 
 
 https://github.com/Dafne-Jaime-Vargas/Entrega-2
+
 https://github.com/SrManiu
 
