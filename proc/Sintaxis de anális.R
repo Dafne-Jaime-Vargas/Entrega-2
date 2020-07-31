@@ -81,7 +81,8 @@ CEP_base_proc <- CEP_base_proc %>% select(ind_nota_gob, #Dependiente
 #Grafico x1 = posicion social
 graf_1 <- ggscatter(CEP_base_proc, x = "posicion_soc", y = "ind_nota_gob",
                     shape = 21, size = 3, # Forma y tamaño de puntos
-                    title = "Gráfico 1. Relación entre Evaluación al desempeño del gobierno y posición social",
+                    title = "Gráfico 1. Relación entre Evaluación al desempeño del gobierno 
+                    y posición social",
                     add = "reg.line", #Agregar recta de regresion
                     cor.coef = TRUE)# Agregar coeficiente correlacion
 
@@ -104,7 +105,8 @@ dev.off()
 #Grafico x3 = índice disposición regularización económica
 graf_3 <- ggscatter(CEP_base_proc, x = "ind_disp_reg_eco", y = "ind_nota_gob",
                     shape = 21, size = 3,
-                    title = "Gráfico 3. Relación entre Evaluación al desempeño del gobierno y disposición de regularización económica",
+                    title = "Gráfico 3. Relación entre Evaluación al desempeño del gobierno 
+                    y disposición de regularización económica",
                     add = "reg.line",
                     cor.coef = TRUE)
 

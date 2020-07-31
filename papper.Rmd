@@ -1,8 +1,12 @@
 ---
 title: "Informe 2"
-author: "Mayron Vasquez, Ignacio Núñez, Nicolás Tobar, Alexis Ibáñez y Dafne Jaime Vargas."
+author: Mayron Vasquez, Ignacio Núñez, Nicolás Tobar, Alexis Ibáñez y Dafne Jaime
+  Vargas.
 date: "21/7/2020"
-output: html_document
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
 bibliography: input/bib/Entrega estadística.bib
 link-citations: yes
 ---
