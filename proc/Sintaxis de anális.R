@@ -10,7 +10,7 @@
   # Docente: Juan Castillo V.
   # Docente auxiliar: Valentina Andrade
   # Ayudante: Sebastián Cortínez Rojas
-  # Fecha: ""
+  # Fecha: "31 de julio"
   ---
   
   
@@ -81,7 +81,7 @@ CEP_base_proc <- CEP_base_proc %>% select(ind_nota_gob, #Dependiente
 #Grafico x1 = posicion social
 graf_1 <- ggscatter(CEP_base_proc, x = "posicion_soc", y = "ind_nota_gob",
                     shape = 21, size = 3, # Forma y tamaño de puntos
-                    title = "Gráfico 1. Relación entre Nota al gobierno y posición social",
+                    title = "Gráfico 1. Relación entre Evaluación al desempeño del gobierno y posición social",
                     add = "reg.line", #Agregar recta de regresion
                     cor.coef = TRUE)# Agregar coeficiente correlacion
 
@@ -92,7 +92,7 @@ dev.off()
 
 #Grafico x2 = identidad política
 graf_2 <- plot_grpfrq(CEP_base_proc$ind_nota_gob,CEP_base_proc$identidad_pol,
-                      title = "Gráfico 2. Relación entre nota al gobierno e Identidad política",
+                      title = "Gráfico 2. Relación entre Evaluación al desempeño del gobierno e Identidad política",
                       type = "box")
 
 png("/cloud/project/output/graphs/graf_2.png")
@@ -104,7 +104,7 @@ dev.off()
 #Grafico x3 = índice disposición regularización económica
 graf_3 <- ggscatter(CEP_base_proc, x = "ind_disp_reg_eco", y = "ind_nota_gob",
                     shape = 21, size = 3,
-                    title = "Gráfico 3. Relación entre Nota al gobierno y disposición de regularización económica",
+                    title = "Gráfico 3. Relación entre Evaluación al desempeño del gobierno y disposición de regularización económica",
                     add = "reg.line",
                     cor.coef = TRUE)
 
