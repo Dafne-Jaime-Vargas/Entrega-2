@@ -5,7 +5,7 @@
   # Tema: Legitimidad política y posición social
   # Cátedra: Estadística Multivariada
   # Sección: 1
-  # Base de datos: CEP
+  # Base de datos: CEP N°83 mayo del 2019
   # Autores: Mayron Vasquez, Ignacio Núñez, Nicolás Tobar, Alexis Ibáñez y Dafne Jaime Vargas.
   # Docente: Juan Castillo V.
   # Docente auxiliar: Valentina Andrade
