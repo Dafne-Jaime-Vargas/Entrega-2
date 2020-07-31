@@ -19,3 +19,6 @@ https://github.com/Dafne-Jaime-Vargas/Entrega-2
 
 https://github.com/SrManiu
 
+https://github.com/danae666
+
+https://github.com/mayronvasquez
