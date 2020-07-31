@@ -1,12 +1,9 @@
 ---
-title: "Informe 2"
+title: "Informe 2. Estadística multivariada"
 author: Mayron Vasquez, Ignacio Núñez, Nicolás Tobar, Alexis Ibáñez y Dafne Jaime
   Vargas.
-date: "21/7/2020"
-output:
-  html_document: default
-  word_document: default
-  pdf_document: default
+date: "31/7/2020"
+output: html_document
 bibliography: input/bib/Entrega estadística.bib
 link-citations: yes
 ---
@@ -47,28 +44,28 @@ Fecha:  31 de julio del 2020
 
 # 2. Resumen 
 
-En la actualidad existe una percepción de mal funcionamiento de la democracia por parte de la ciudadanía, la cual se relega a componentes de ésta como el gobierno, los partidos políticos y el congreso, los cuales no son instituciones o un sistema de confianza para los chilenos [@cep_estudio_2019-1]. Por ende, esta disociación entre ciudadanía e institucionalidad política conlleva a fenómenos como la baja participación electoral y un desentendimiento los procesos políticos ciudadanos.
+Actualmente existe una amplia percepción negativa sobre el funcionamiento de la democracia en Chile por parte de la ciudadanía, la cual se ve expresada en cuestiones tales como la valoración que tienen los chilenos sobre las distintas instituciones que forman parte de la democracia, tales como el gobierno, los partidos políticos o los congresistas. Se han difundido diversas teorías sobre los fenómenos que han provocado la desconexión entre la sociedad civil y las instituciones democráticas, pero en general estos estudios abordan el problema desde una perspectiva de la confianza en la institución antes que en la posición social o la falta de identidad política de los chilenos.
 
-Es por este fenómeno, que nuestra pregunta de investigación busca conocer ¿Cuál es la relación existente entre la **percepción de la posición social, la disposición a la regularización económica** y la **identidad política con la evaluación del desempeño político del gobierno** en Chile en mayo del año 2019?. Por consiguiente el objetivo general de este trabajo es: Analizar la relación existente entre la percepción de la posición social, disposición a la regularización económica y la identidad política con la evaluación del desempeño político del gobierno en Chile en mayo del año 2019.
+El siguiente trabajo se propone aportar a esta discusión y analizar si existe relación entre la identidad política, la posición social y la disposición a la regulación económica de la ciudadanía con la evaluación política del gobierno. Es por esto que surge la pregunta ¿Cuál es la relación existente entre la **percepción de la posición social, la disposición a la regularización económica** y la **identidad política con la evaluación del desempeño político del gobierno** en Chile en mayo del año 2019?
 
-Para esto se utilizará la base de datos de la encuesta CEP n°83 del periodo de mayo del 2019, la cual busca representar a la población de todo chile a través de una muestra con 1380 casos.
-El resultado principal de esta investigación es que efectivamente, tanto la posición social, la identidad política y el índice de disposición a la regularización económica, reflejan una relación y logran conformar un modelo que explica la evaluación hacia el gobierno, donde todos estos predictores resultan ser significativos estadísticamente, es decir extrapolables a la población.
+Se recurrió a una prueba estadística de regresión múltiple, donde los resultados muestran que efectivamente existe una relación entre la posición social, la identidad política y el índice de disposición a la regularización económica con la evaluación del desempeño político del gobierno, conformando un modelo que permite explicar, en parte, este último. Todos estos predictores resultan ser significativos estadísticamente, es decir extrapolables a la población.
 
 
 # 3. Introducción 
 
-Actualmente Chile vive una ruptura entre la institucionalidad política y la sociedad civil. Como bien es conocido, desde el punto de vista valórico, los chilenos se encuentran disociados de las instituciones y del sistema político [@garreton_gran_2016]. Según @cep_estudio_2019, casi el 50% de los chilenos considera que nuestra democracia funciona mal o muy mal, y tanto el gobierno, los partidos políticos y congreso no superan el 5% de confianza como institución.
+Actualmente Chile vive una ruptura entre la institucionalidad política y la sociedad civil. Como bien es conocido, desde el punto de vista valórico, los chilenos se encuentran disociados de las instituciones y del sistema político [@garreton_gran_2016]. Según [@cep_estudio_2019-1], casi el 50% de los chilenos considera que nuestra democracia funciona mal o muy mal, y tanto el gobierno, los partidos políticos y congreso no superan el 5% de confianza como institución.
 
 En ese sentido, esta crisis estaría dificultando el correcto funcionamiento de las instituciones políticas, por lo que resulta relevante estudiar este fenómeno. Según @garreton_gran_2016, esta ruptura de la relación clásica entre política y sociedad estaría provocando que la sociedad pierda el sentido de la democracia como concepto básico de la organización moderna, lo que, sumado a una extrema individualización, estaría permitiendo que ciertos poderes fácticos sustituyan perversamente las instituciones.
 
-En cuanto a antecedentes empíricos, @segovia_confianza_2008 concluye, a partir de una regresión múltiple, que los juicios de confianza sobre las instituciones dependen principalmente de su capacidad y benevolencia. En adición, el estudio de @cereceda-marambio_satisfaccion_2017 señala que la satisfacción con la democracia proviene más por confianza en instituciones y economía que por variables de orden valórico.
+
+En cuanto a antecedentes empíricos de la relación entre sociedad civil y democracia, @segovia_confianza_2008 concluye, a partir de una regresión múltiple, que los juicios de confianza sobre las instituciones dependen principalmente de su capacidad y benevolencia. En adición, el estudio de @cereceda-marambio_satisfaccion_2017 señala que la satisfacción con la democracia proviene más por confianza en instituciones y economía que por variables de orden valórico.
 
 Aún así, generalmente estos estudios se basan en el concepto de _“confianza”_ para explicar el funcionamiento de las instituciones, pero como menciona @garreton_gran_2016, la falta de confianza no indica cómo la institución funciona, pues termina personalizándolas, siendo un concepto impreciso para explicar la ruptura entre sociedad civil e instituciones. Es por eso que, como aporte para la disciplina sociológica, este informe propone estudiar esta ruptura desde conceptos alternativos a la confianza.
 
-Se propone estudiar cómo la autopercepción de la posición social y la identidad política se relacionan con la evaluación que hacen los sujetos del gobierno de turno, entendiendo esta última como la nota que se asigna al rendimiento del gobierno en ciertas materias de discusión pública. Se espera que a medida que la posición social baje, se aleje la identidad política a la del gobierno de turno, y que la evaluación de este último disminuya.
+Se propone estudiar cómo la autopercepción de la posición social, la identidad política y la disposición a la regulación económica se relacionan con la evaluación que hacen los sujetos del gobierno de turno. Se espera que a medida que la identidad política y la disposición a la regulación económica se alejen a la del gobierno de turno (derecha y libre mercado), la evaluación de este último disminuya. Asimismo, se espera que la posición social no tenga un efecto relevante en la evaluación del gobierno.
 
-En esta línea, estudios psicosociales afirman que a partir del ejercicio de comparación del individuo con quienes difieren de su posición social, puede emerger un sentimiento de justicia que permite que el orden imperante sea o no legítimo para él [@adam_inequity_1965; @guienne_du_2001]. 
-En relación con Chile, @bano_revista_2020 menciona que la institucionalidad política ha marginado a los sectores populares de sus decisiones, provocando cierto malestar en estos grupos. Por otro lado, @ruiz_desigualdad_2015 and @garreton_ciencias_2014 entienden que habrían ofertas de identidades políticas fragmentadas que no se agrupan según orientaciones colectivas compartidas de clase, lo que provoca que los partidos e instituciones políticas no sean capaces de establecer nexos entre un proyecto colectivo y la posición social.
+En esta línea, estudios psicosociales afirman que a partir del ejercicio de comparación del individuo con quienes difieren de su posición social, puede emerger un sentimiento de justicia que permite que el orden imperante sea o no legítimo para él [@adam_inequity_1965; @guienne_du_2001], pero en Chile, si bien se observa cierto malestar los grupos populares, estos no han logrado reconocerse en tanto clase para establecer un proyecto político de su interés [@bano_revista_2020]. Esto se explica porque habrían ofertas de identidades políticas fragmentadas que no se agrupan según orientaciones compartidas de clase, lo que provoca que las instituciones políticas no sean capaces de establecer nexos entre un proyecto colectivo y la posición social [@garreton_ciencias_2014; @ruiz_desigualdad_2015]. Lo anterior provocaría que la evaluación política se vea influida por elementos cortoplacistas y de interés individual, como la disposición a la regulación económica.
+
 
 
 # Objetivos/hipótesis 
@@ -79,9 +76,10 @@ Para guiar la investigación, se propone la siguiente pregunta:
 
 Por lo tanto, el objetivo general de este trabajo es: Analizar la relación existente entre la percepción de la posición social, disposición a la regularización económica y la identidad política con la evaluación del desempeño político del gobierno en Chile en mayo del año 2019.
 
-Respecto a la hipótesis, se propone que en cuanto aumente la disposición de regularización económica (ligada a una de libre mercado) y, en cuanto más se incline la identidad política al sector de derecha, mayor debería ser la evaluación del desempeño político del gobierno en Chile en mayo del año 2019. Asimismo, la percepción de la posición social no debería presentar mayor efecto en la variable dependiente.
+Respecto a la hipótesis, se propone que en cuanto disminuya la disposición de regularización económica (ligada a una estatista) y, en cuanto más se incline la identidad política al sector de izquierda, menor debería ser la evaluación del desempeño político del gobierno en Chile en mayo del año 2019. Asimismo, la percepción de la posición social no debería presentar mayor efecto en la variable dependiente.
 
 En base a la anterior pregunta, se plantean los siguientes objetivos específicos:
+
 - Construir un índice, a partir de 9 variables de la base de datos, de la evaluación del desempeño político del gobierno en mayo del año 2019.
 
 - Caracterizar la percepción de la posición social, identidad política, disposición a la regulación económica y desempeño político del gobierno en mayo del año 2019.
@@ -100,21 +98,22 @@ La base de datos a utilizar **[CEP_base_proc]** consiste en un fragmento de la b
 
 Para la realización de este ejercicio se tomaron en consideración las siguientes variables de la base de datos **CEP_base_poc**.
 
-- [posición_soc] = Nivel del grupo en el que se ubica el sujeto. Varía del 1 como nivel más bajo al 10 como nivel más alto.
+ - [posición_soc] = Nivel del grupo en el que se ubica el sujeto. Varía del 1 como nivel más bajo al 10 como nivel más alto.
+ 
+ - [identidad_pol] = Posición política a la que se siente más cercano el sujeto. Se recodifica contemplando las categorías: Derecha, Centro, Izquierda, y Ninguno.
 
-- [identidad_pol] = Posición política a la que se siente más cercano el sujeto. Contempla las categorías: Derecha, Centro derecha, Centro, Centro izquierda, Izquierda, Independiente y Ninguno.
+ - [ind_dips_reg_eco] = media entre las variables “perc_resp_ing” (percepción de la responsabilidad de ingresos) y  “perc_resp_sus” (percepción de la responsabilidad de sustento). Varía del 1 al 10, donde 1 es una percepción de regularización económica estatista y 10 con libre mercado.
+ 
+ - [ind_nota_gob] = Media entre la nota que se le asigna al gobierno por su gestión en delincuencia, pensiones, salud, educación, empleo, crecimiento económico, transporte público e inmigración. Varía del 1 al 7.
 
-- [ind_dips_reg_eco] = media entre las variables “perc_resp_ing” (percepción de la responsabilidad de ingresos) y  “perc_resp_sus” (percepción de la responsabilidad de sustento). Varía del 1 al 10, donde 1 es una percepción de regularización económica estatista y 10 con libre mercado.
+ - [sexo] = Si es hombre (1)  o mujer (2). 
 
-- [ind_nota_gob] = Media entre la nota que se le asigna al gobierno por su gestión en delincuencia, pensiones, salud, educación, empleo, crecimiento económico, transporte público e inmigración. Varía del 1 al 7.
+ - [Edad] = Representa en años la edad de la/el entrevistado.
 
-- [sexo] = Si es hombre (1)  o mujer (2). 
-
-- [Edad] = Posición política a la que se siente más cercano el sujeto. Contempla las categorías: Derecha, Centro derecha, Centro, Centro izquierda, Izquierda e Independiente.
-[nivel_educ] = Nivel de educación máximo alcanzado. Contempla las categorías: educación básica incompleta, educación básica completa, educación media incompleta, educación media completa, educación superior no universitaria incompleta, educación superior no universitaria completa, educación superior universitaria incompleta, educación superior universitaria completa y estudios de posgrado.
+ - [nivel_educ] = Nivel de educación máximo alcanzado. Recodificado, contempla las categorías: educación básica incompleta, educación básica completa y media incompleta, educación media completa y educación superior incompleta, educación superior completa y estudios de posgrado.
 
 
-**Tabla 1. Descriptivos**
+**Tabla 1. Descripción de las variables selectas**
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 print(dfSummary(CEP_base_descriptivo, headings = FALSE), method = "render")
 ```
@@ -134,9 +133,10 @@ Se eligió esta metodología porque permite corroborar si las variables independ
 
 ## 4.1 Análisis Univariado 
 
-En la tabla 1, la variable “Identidad política” tiene una alta concentración de casos en el número 4 (“ninguna), correspondiente al 62% de los casos, indicando que las personas no suelen identificarse con algún sector político. La variable “Índice de nota al gobierno” tiene una media y mediana de 3.2, y una dispersión de 1,2 lo que indica que los datos tienden a concentrarse cerca de valores medios-bajos. Por otra parte, el índice de “disposición de regularización económica” tiene una mediana de 6, una media de 6,2, y una desviación estándar de 2,2, mostrando una pequeña concentración de la curva a la derecha. Sobre la variable de posición social, también existe una concentración en los casos medios-bajos, el nivel 5 con un 33.7%, seguido por las opciones de 4 y 3 con 22,5% y 15,9% respectivamente. 
+En la tabla 1, la variable _“Identidad política”_ tiene una alta concentración de casos en el número 4 (_“ninguna"_), correspondiente al 62% de los casos, indicando que las personas no suelen identificarse con algún sector político. La variable _“Índice de nota al gobierno”_ tiene una media y mediana de 3.2, y una dispersión de 1,2 lo que indica que los datos tienden a concentrarse cerca de valores medios-bajos. Por otra parte, el índice de _“disposición de regularización económica”_ tiene una mediana de 6, una media de 6,2, y una desviación estándar de 2,2, mostrando una pequeña concentración de la curva a la derecha. Sobre la variable de posición social, también existe una concentración en los casos medios-bajos, el nivel 5 con un 33.7%, seguido por las opciones de 4 y 3 con 22,5% y 15,9% respectivamente. 
 
-Además, la variable sexo nos arroja que más de la mitad de la muestra son mujeres (62%). Por otro lado la variable nivel educacional nos muestra que al menos un 40,7% tiene educación media incompleta y de ese porcentaje, la mitad posee al menos educación básica incompleta. Finalmente, edad evidencia una mediana de 50, es decir al menos un 50% tiene entre 18 y 50 años, con una desviación estándar de 18.1
+Además, la variable sexo nos arroja que más de la mitad de la muestra son mujeres (62%). Por otro lado la variable nivel educacional nos muestra que al menos un 40,7% tiene educación media incompleta y de ese porcentaje, la mitad posee al menos educación básica incompleta. Finalmente, la edad evidencia una mediana de 50, es decir al menos un 50% tiene entre 18 y 50 años.
+
 
 ## 4.2 Análisis Bivariado
 
@@ -170,36 +170,35 @@ El gráfico 3 muestra la correlación de la nota al gobierno y la disposición a
 
 ## 4.3 Modelo de Regresión 
 
-En el presente trabajo se estiman dos modelos, el primero es estimado en relación al objetivo principal y el segundo modelo se realiza con las variables de control.
+En el presente trabajo se estiman dos modelos: el primero estimado en relación al objetivo principal y el segundo  se realiza con variables de control.
 
-
+**Formula teórica**
 ```{r results='asis', echo=FALSE}
 extract_eq(reg_1)
 extract_eq(reg_2)
 ```
 
+**Formula de los modelos**
 ```{r results='asis', echo=FALSE}
 extract_eq(reg_1, use_coefs = TRUE)
 extract_eq(reg_2, use_coefs = TRUE)
 ```
 
-
 La tabla 2, nos muestra dos modelos, donde los coeficientes señalan la relación existente de las variables independientes y el índice creado de evaluación al gobierno. Así en el modelo 1 la nota en promedio al gobierno es de 2.698
 
-Respecto al Modelo 1, se puede afirmar en primer lugar respecto a la variable de identidad política que; la categoría asociada al centro califica en promedio 0.136 menos al gobierno en comparación a la identidad política de derecha, pero no logra predecir significativamente el puntaje en el índice [b=-0.136, SE=0.147, p>0.05] ceteris paribus. Así la identidad política de izquierda califica en promedio 0.635 puntos menos al gobierno en comparación a la derecha [b= -0.635, SE=0.118, p<0.001] ceteris paribus. Finalmente, se puede evidenciar que la posición política ninguno califica en promedio 0.72 puntos menos al gobierno en comparación a la identidad política de derecha, ceteris paribu [b=-0.72, SE=0.093, p<0.001] los coeficientes de las dos últimas categorías (izquierda y ninguno) son significativos con un 99.9% de confianza respecto la nota promedio hacia el gobierno.
+Respecto al Modelo 1, la variable de identidad política, con la categoría Centro califica en promedio 0.136 puntos menos al gobierno en comparación a la categoría Derecha, pero no logra predecir significativamente el puntaje en el índice [b=-0.136, SE=0.147, p>0.05] ceteris paribus. Además, la categoría Izquierda califica en promedio 0.635 puntos menos al gobierno en comparación a la Derecha [b= -0.635, SE=0.118, p<0.001] ceteris paribus. Finalmente, se puede evidenciar que la categoría Ninguno califica en promedio 0.72 puntos menos al gobierno en comparación a la Derecha, ceteris paribus [b=-0.72, SE=0.093, p<0.001] los coeficientes de las dos últimas categorías (Izquierda y Ninguno) son significativos con un 99.9% de confianza respecto la evaluación promedio al gobierno.
 
-Respecto a la segunda variable del modelo 1, se puede afirmar que el índice de disposición política a la regularización económica predice significativamente la nota promedio al gobierno [b=0.084, SE=0.015, p<0.001] ceteris paribus, un aumento de cada punto en la disposición aumenta un 0.084 puntos en promedio a la nota al gobierno.
+Respecto al índice de disposición política a la regularización económica, se puede afirmar que predice significativamente la nota promedio al gobierno [b=0.084, SE=0.015, p<0.001] ceteris paribus, un aumento de cada punto en la disposición aumentaría un 0.084 puntos en promedio en la evaluación al gobierno.
 
-Finalmente, respecto a la tercera variable del modelo 1, se puede afirmar que la posición social predice significativamente la nota promedio al gobierno [b=0.128, SE=0.020, p<0.001] ceteris paribus, es decir a cada punto más de posición social la calificación aumenta 0.128 en promedio.
+Finalmente, respecto a la posición social se evidencia que predice significativamente la nota promedio al gobierno [b=0.128, SE=0.020, p<0.001] ceteris paribus, es decir a cada punto más de posición social la calificación aumenta 0.128 en promedio.
 
-Al momento de añadir las variables de control, la nota al gobierno en promedio aumenta (modelo 1=2.698, modelo 2=2.733), pero el intercepto mantiene su significancia (p<0.001). También se puede añadir que aumentan levemente los betas asociados a la posición política de centro (-0.136 a -0.163 ), izquierda (-0.635 a -0.665) y ninguno (-0.720 a -0.757), manteniendo su significancia (o falta de ésta en el caso de la posición política de centro), de la misma forma aumenta el índice de disposición a la regularización económica (0.084 a 0.085) y la posición social (0.128 a 0.132) manteniendo su significancia.
+En el modelo 2, añadiendo las variables de control, el intercepto (nota al gobierno) en promedio aumenta (modelo 1=2.698, modelo 2=2.733), pero mantiene su significancia (p<0.001); además, se evidencia un aumento leve de los betas asociados a la posición política de Centro (-0.136 a -0.163 ), Izquierda (-0.635 a -0.665) y Ninguno (-0.720 a -0.757), manteniendo su significancia (o falta de ésta en el caso de la categoría Centro); finalmente,  aumenta el índice de disposición a la regularización económica (0.084 a 0.085) y la posición social (0.128 a 0.132) manteniendo su significancia.
 
-Respecto a la primera variable de control añadida al modelo 2; nivel educacional, se puede reportar que el tener educación básica completa o media incompleta califica en promedio 0.117 mejor al gobierno en comparación a no tener educación, ceteris paribus [b=0.11, SE=0.101, p>0.05]; sobre su segunda categoría se reporta que el tener educación media completa o superior incompleta significa un 0.075 de mejor nota al gobierno en comparación al no tener estudios [b=0.075, SE=0.098, p>0.05], finalmente respecto a tener educación superior completa o postgrado significa un 0.128 menos de calificación promedio al gobierno [b=-0.128, SE=0.112, p>0.05] ceteris paribus, sin embargo ni uno de los beta’s de estas categorías es estadísticamente significativo (p>0.05)
+Respecto a la variable de control; nivel educacional, se puede reportar que el tener educación básica completa o media incompleta califica en promedio 0.117 mejor al gobierno en comparación a no tener educación, ceteris paribus [b=0.11, SE=0.101, p>0.05]; sobre su segunda categoría se reporta que el tener educación media completa o superior incompleta significa un 0.075 de mejor nota al gobierno en comparación al no tener estudios [b=0.075, SE=0.098, p>0.05], finalmente respecto a tener educación superior completa o postgrado significa un 0.128 menos de calificación promedio al gobierno [b=-0.128, SE=0.112, p>0.05] ceteris paribus, sin embargo ni uno de los beta’s de estas categorías es estadísticamente significativo (p>0.05)
 
 Sobre la segunda variable, se reporta que el ser mujer tiene en promedio 0.035 puntaje menos en promedio a la nota del gobierno en comparación a los hombres, ceteris paribus pero esta no resulta ser significativa [b=-0.35, SE=0.064, p>0.05]
 
 Finalmente, respecto al reporte de la variable edad se puede interpretar que por cada año adicional se califica 0.001 menos en promedio al gobierno, ceteris paribus, pero este resultado no es significativo [b=-0.001 SE=0.002, p>0.05]
-
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 sjPlot::tab_model(list(reg_1, reg_2),
@@ -215,26 +214,27 @@ sjPlot::tab_model(list(reg_1, reg_2),
 **Fuente: Elaboración propia en base a CEP n°83 2019**
 
 
-El gráfico 4 muestra que las variables identidad política de centro, las categorías de nivel educacional, sexo y edad pasan por el cero, y por ende, hay un 95% de probabilidad de que los intervalos de confianza puedan alcanzar un valor igual a 0, por ello no resultan significativas. No así con las categorías de identidad política izquierda y ninguno, o con el índice de disposición a la regularización social y la posición social, que muestran con un 95% de confianza que son distintas de 0.
+El gráfico 4 evidencia que las variables identidad política de centro, las categorías de nivel educacional, sexo y edad pasan por el cero, y por ende, hay un 95% de probabilidad de que los intervalos de confianza puedan alcanzar un valor igual a 0 y que no existan diferencias, por ello no resultan significativas. No así con las categorías de identidad política izquierda y ninguno, o con el índice de disposición a la regularización social y la posición social, que muestran con un 99,9% de confianza que son distintas de 0.
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 sjPlot::plot_model(reg_2,ci.lvl = c(0.95), title = "Gráfico 4. Modelo 2, coeficiente de regresión e intervalos de confianza",vline.color = "grey",line.size = 1)
-
 ```
+
+**Fuente: Elaboración propia en base a CEP n°83 2019**
 
 ## 4.4 Ajuste global del modelo
 
-Respecto al ajuste del modelo 1, se puede evidenciar que el ajuste del modelo es de un 12.2% (R2 ajustado), es decir, se puede explicar en un 12.2%  la varianza de la nota del gobierno a través de las variables identidad política, posición social y el índice a la disposición en la regularización económica. En el modelo 2, la variación que tiene el R cuadrado ajustado es leve (de 12.2% a un 12.6%), pero mayor que en el modelo 1, esto puede verse relacionado con la falta de significancia estadística de las variables de control.
+Respecto al ajuste del modelo 1 (ver tabla 2), se puede afirmar que el modelo tiene una capacidad de explicar un 12.2% de la variación de la nota del gobierno a través de las variables identidad política, posición social y disposición en la regularización económica. En el modelo 2, la variación del R cuadrado ajustado es levemente mayor que en el modelo 1 (12,6%), lo que puede asociarse a la falta de significancia estadística de las variables de control.
 
 # 5. Conclusión 
 
-En síntesis se da que las tres variables predictoras escogidas (identidad política, índice de disposición a la regularización económica y la posición social) resultaron ser significativas en la predicción de variación en relación a la nota del gobierno. Es decir son variables predictoras del fenómeno, pero que en su relación (sea negativa o positiva) están sujetas al contexto, con ello nos referimos por ejemplo a la posición política que el gobierno posea, en esta encuesta toma, es el gobierno de Sebastián Piñera, para ejemplificar, esto es que se ve una relación de índole negativa en la categoría de posición política de izquierda.  
+En conclusión, según los resultados, se observa que la disposición a la regulación económica no tiene un efecto relevante en la variación de la nota que los entrevistados le asignan al desempeño político del gobierno. Por el contrario, se nota que la identidad política, en sus categorías de “izquierda” y “ninguna”, impactan negativamente con una alta magnitud en la nota asignada. Sobre la posición política, su efecto es medianamente positivo. Además, se observa que estos resultados, al ser controlados por sexo, nivel educacional y edad, se mantienen similares a su estado inicial.
 
-Respecto a nuestra hipótesis formulada (H1), se puede afirmar, es decir que en cuanto aumenta la percepción de la posición social aumentará la evaluación en el desempeño político, la misma lógica sigue la identidad política, mientras más ligada está a la derecha tenderá a tener mejores calificaciones en comparación a sectores de izquierda. Finalmente, mientras mayor sea la disposición a una regularización económica liberal (menos estatista) mejor será la evaluación del desempeño que ha realizado el gobierno 
+De las tres variables dependientes escogidas, todas resultaron ser estadísticamente significativas, con un 99.9% en relación a la nota del gobierno, lo que arroja altas probabilidades de que estas diferencias ocurren dentro de los habitantes de Chile mayores de 18 años, permitiendo rechazar la hipótesis nula. Sin embargo, las variables escogidas de control, no lograron significancia estadística, lo cual limita el análisis de control.
 
-Finalmente, las tres variables escogidas resultaron ser estadísticamente significativas, con un 99.9% en relación a la nota del gobierno, esto nos arroja una probabilidad muy alta de que estas diferencias se den en la población realmente, pudiendo rechazar la hipótesis nula. Sin embargo, las variables escogidas de control, no lograron significancia estadística, lo cual limita un análisis más amplio, a pesar de ello esto debe considerarse a la hora de realizar estudios a futuro. 
- 
+Dicho a lo anterior, respecto a nuestra hipótesis formulada (H1), se puede afirmar que si bien la posición social presenta un impacto medianamente bajo, no termina por ser una variable irrelevante para la explicación de la nota asignada al gobierno. Asimismo, aunque mientras la disposición a la regulación económica se acerca a la tendencia del gobierno de libre mercado, la nota aumenta, la magnitud de su efecto resulta bastante menor a lo esperado. Por último, a diferencia de las otras dos variables, se cumple lo esperado en la identidad política, aunque cabe destacar que la categoría “ninguno” tiende a notas más bajas que “izquierda”, lo cual podría estar relacionado con el malestar producto de la desafección política, cuestión que podría se profundizada en un próximo estudio.
+
 
 # Referencias Bibliográficas
 

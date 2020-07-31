@@ -10,7 +10,7 @@
   # Docente: Juan Castillo V.
   # Docente auxiliar: Valentina Andrade
   # Ayudante: Sebastián Cortínez Rojas
-  # Fecha: "31 de julio"
+  # Fecha: "31 de julio, 2020"
   ---
   
   
@@ -75,6 +75,18 @@ CEP_base_proc <- CEP_base_proc %>% select(ind_nota_gob, #Dependiente
 
 
 # ---- Parte 3.2: tablas bivariadas  ---- 
+
+M <- CEP_base_proc %>% # se especifica la base de datos
+  select(ind_nota_gob, ind_disp_reg_eco, posicion_soc, Edad)  # se seleccionan las variables
+
+
+tab_corr(M,
+         triangle = "lower", 
+         title = "Tabla de correlación", 
+         file = "output/tables/tabla_corr.html")
+
+
+webshot("output/tables/tabla_corr.html", "output/tables/tabla_corr.png") 
 
 # Gráfico de nube de puntos / scatter de ambas (respecto a la variable dependiente) 
 

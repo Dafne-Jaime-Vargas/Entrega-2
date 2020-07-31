@@ -10,7 +10,7 @@
   # Docente: Juan Castillo V.
   # Docente auxiliar: Valentina Andrade
   # Ayudante: Sebastián Cortínez Rojas
-  # Fecha: ""
+  # Fecha: "31 de julio, 2020"
   ---
   
   # ---- Parte 1: Librerías ----
