@@ -10,7 +10,12 @@ Para este proceso se contó con la autorización de TODOS los creadores del cont
 
 Esta entrega posee un formato reproducible IPO: https://juancarloscastillo.github.io/ipo/
 
+<<<<<<< HEAD
 Esta entrega se basa en la encuenta CEP N°83 de Mayo del 2019. https://www.cepchile.cl/cep/encuestas-cep/encuestas-2009-2018/estudio-nacional-de-opinion-publica-mayo-2019
+=======
+Esta entrega se basa en la encuenta CEP N°83 de Mayo del 2019.
+https://www.cepchile.cl/cep/encuestas-cep/encuestas-2009-2018/estudio-nacional-de-opinion-publica-mayo-2019
+>>>>>>> 02cdbf550f50db5b21a1207993c9dbfd97eeb21c
 
 Las cuentas Github asociadas donde se puede encontrar el proyecto son
 
@@ -21,4 +26,7 @@ https://github.com/SrManiu
 https://github.com/danae666
 
 https://github.com/mayronvasquez
+<<<<<<< HEAD
 
+=======
+>>>>>>> 02cdbf550f50db5b21a1207993c9dbfd97eeb21c
