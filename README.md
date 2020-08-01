@@ -1,12 +1,12 @@
-#Entrega-2. Grupo 1 Legitimidad política y posición social
+#Entrega-2. 
 
 Este es un trabajo realizado para la cátedra Estadística multivariada. Pero que fue adaptado para su accesibilidad y reproducibilidad para el elecitvo de profundización metodológica: Ciencia Social Abierta, herramientas para la Reproducibilidad, Colaboración y Comunicación de la Investigación Social
 
 Por ello este proyecto posee dos autores distintos:
 
-la y los creadores del trabajo (Cátedra estadística): Mayron Vasquez, Ignacio Núñez, Nicolás Tobar, Alexis Ibáñez y Dafne Jaime Vargas.
+la y los creadores del trabajo (Cátedra estadística): Mayron Vasquez, Ignacio Núñez, Nicolás Tobar, Alexis Ibáñez y Dafne Jaime Vargas. Grupo 1 Legitimidad política y posición social
 
-las y los reproductores del trabajo (para el electivo): Mayron Vasquez, Danae Pedraza, Alvaro Serrano y Dafne Jaime Vargas
+las y los reproductores del trabajo (para el electivo): Mayron Vasquez, Danae Pedraza, Alvaro Serrano y Dafne Jaime Vargas. Grupo 9
 
 Para este proceso se contó con la autorización de TODOS los creadores del contenido.
 
