@@ -15,7 +15,6 @@ Esta entrega posee un formato reproducible IPO: https://juancarloscastillo.githu
 
 Esta entrega se basa en la encuesta CEP N°83 de Mayo del 2019. https://www.cepchile.cl/cep/encuestas-cep/encuestas-2009-2018/estudio-nacional-de-opinion-publica-mayo-2019
 
-
 Las cuentas Github asociadas donde se puede encontrar el proyecto son
 
 https://github.com/Dafne-Jaime-Vargas/Entrega-2
