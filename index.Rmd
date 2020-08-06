@@ -1,0 +1,16 @@
+name: "La relación entre la sociedad civil y el gobierno de Piñera. Un análisis de regresión sobre el efecto de la posición social, disposición a la regulación económica e identidad política en la evaluación del desempeño político del gobierno."
+output_dir: "."
+navbar:
+  title: "Investigaciones de acceso abierto"
+  left:
+  - text: "Papper"
+    href: papper.html
+  right:
+  - icon: fa-envelope fa-lg
+    href: (dafne.jaime@ug.uchile.cl)
+  - icon: fa-github fa-lg
+    href: https://github.com/Dafne-Jaime-Vargas/Entrega-2
+output:
+  html_document:
+    theme: spacelab #simplex sandstone cosmo cerulean paper darkly flatly lumen readable
+    css: 'styles.css'
