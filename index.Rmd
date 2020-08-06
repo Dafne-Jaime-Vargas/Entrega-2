@@ -12,5 +12,8 @@ navbar:
     href: https://github.com/Dafne-Jaime-Vargas/Entrega-2
 output:
   html_document:
-    theme: spacelab #simplex sandstone cosmo cerulean paper darkly flatly lumen readable
+    theme:cerulean 
     css: 'styles.css'
+    
+   
+    
