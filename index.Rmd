@@ -7,6 +7,7 @@ Este es un sitio web que alberga un proyecto de investigación realizado para la
 Por ello este proyecto posee dos autores distintos:
 
 la y los creadores del trabajo (Cátedra estadística): 
+
 - Mayron Vasquez, 
 - Ignacio Núñez, 
 - Nicolás Tobar, 
