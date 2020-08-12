@@ -8,8 +8,6 @@ navbar:
     href: papper.html
     
   right:
-  - icon: fa-envelope fa-lg
-    href: (dafne.jaime.vargas@gmail.com)
   - icon: fa-github fa-lg
     href: https://github.com/Dafne-Jaime-Vargas/Entrega-2
     
