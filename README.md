@@ -15,7 +15,9 @@ Esta entrega posee un formato reproducible [IPO](https://juancarloscastillo.gith
 
 Esta entrega se basa en la encuesta [CEP N°83 de Mayo del 2019.](https://www.cepchile.cl/cep/encuestas-cep/encuestas-2009-2018/estudio-nacional-de-opinion-publica-mayo-2019)
 
-Las cuentas Github asociadas donde se puede encontrar el [proyecto]( https://dafne-jaime-vargas.github.io/Entrega-2/) son:
+El proyecto puede encontrarse [aquí]( https://dafne-jaime-vargas.github.io/Entrega-2/) o [aquí](https://osf.io/796bf/).
+
+Las cuentas asociadas al proyecto son:
 
 [Dafne Jaime Vargas](https://github.com/Dafne-Jaime-Vargas/Entrega-2)
 
