@@ -26,8 +26,8 @@ pacman::p_load(summarytools, # Tablas
 
 remotes::install_github("datalorax/equatiomatic")
 
-load("/cloud/project/input/data/proc/CEP_base_proc.RData") 
-load("/cloud/project/input/data/proc/CEP_base_descriptivo.RData") 
+load("../project/input/data/proc/CEP_base_proc.RData") 
+load("../project/input/data/proc/CEP_base_descriptivo.RData") 
 
 
 ```
@@ -55,7 +55,7 @@ Se recurrió a una prueba estadística de regresión múltiple, donde los result
 
 # 3. Introducción 
 
-Actualmente Chile vive una ruptura entre la institucionalidad política y la sociedad civil. Como bien es conocido, desde el punto de vista valórico, los chilenos se encuentran disociados de las instituciones y del sistema político [@garreton_gran_2016]. Según [@cep_estudio_2019-1], casi el 50% de los chilenos considera que nuestra democracia funciona mal o muy mal, y tanto el gobierno, los partidos políticos y congreso no superan el 5% de confianza como institución.
+Actualmente Chile vive una ruptura entre la institucionalidad política y la sociedad civil. Como bien es conocido, desde el punto de vista valórico, los chilenos se encuentran disociados de las instituciones y del sistema político [@garreton_gran_2016]. Según @cep_estudio_2019-1, casi el 50% de los chilenos considera que nuestra democracia funciona mal o muy mal, y tanto el gobierno, los partidos políticos y congreso no superan el 5% de confianza como institución.
 
 En ese sentido, esta crisis estaría dificultando el correcto funcionamiento de las instituciones políticas, por lo que resulta relevante estudiar este fenómeno. Según @garreton_gran_2016, esta ruptura de la relación clásica entre política y sociedad estaría provocando que la sociedad pierda el sentido de la democracia como concepto básico de la organización moderna, lo que, sumado a una extrema individualización, estaría permitiendo que ciertos poderes fácticos sustituyan perversamente las instituciones.
 

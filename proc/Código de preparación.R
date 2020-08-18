@@ -382,8 +382,8 @@ stargazer(CEP, type="text")
 CEP_base_proc <- CEP
 CEP_original <- Encuesta_CEP
 
-save.image("/cloud/project/input/data/original/CEP_original.RData")
+save.image("../project/input/data/original/CEP_original.RData")
 
-save.image("/cloud/project/input/data/proc/CEP_base_proc.RData")
+save.image("../project/input/data/proc/CEP_base_proc.RData")
 
-save.image("/cloud/project/input/data/proc/CEP_base_descriptivo.RData")
+save.image("../project/input/data/proc/CEP_base_descriptivo.RData")

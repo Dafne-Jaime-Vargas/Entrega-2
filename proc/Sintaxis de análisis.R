@@ -33,13 +33,13 @@ pacman::p_load(dplyr,  #Manipulacion de datos
                sjlabelled, #etiquetas variables
                coefplot) # graficos de coeficientes
 
-
+webshot::install_phantomjs()
 
 # ---- Parte 2: Datos (base procesada) ---- 
 
 # Cargar base de datos y fijarnos en nuestro espacio de trabajo (Enviroment). 
 
-load("/cloud/project/input/data/proc/CEP_base_proc.RData") 
+load("../project/input/data/proc/CEP_base_proc.RData") 
 
 # Exploramos los nombres de las variables  
 
@@ -88,6 +88,7 @@ tab_corr(M,
 
 webshot("output/tables/tabla_corr.html", "output/tables/tabla_corr.png") 
 
+
 # Gráfico de nube de puntos / scatter de ambas (respecto a la variable dependiente) 
 
 #Grafico x1 = posicion social
@@ -98,7 +99,7 @@ graf_1 <- ggscatter(CEP_base_proc, x = "posicion_soc", y = "ind_nota_gob",
                     add = "reg.line", #Agregar recta de regresion
                     cor.coef = TRUE)# Agregar coeficiente correlacion
 
-png("/cloud/project/output/graphs/graf_1.png")
+png("../project/output/graphs/graf_1.png")
 plot(graf_1)
 dev.off()
 
@@ -108,7 +109,7 @@ graf_2 <- plot_grpfrq(CEP_base_proc$ind_nota_gob,CEP_base_proc$identidad_pol,
                       title = "Gráfico 2. Relación entre Evaluación al desempeño del gobierno e Identidad política",
                       type = "box")
 
-png("/cloud/project/output/graphs/graf_2.png")
+png("../project/output/graphs/graf_2.png")
 plot(graf_2)
 dev.off()
 
@@ -122,7 +123,7 @@ graf_3 <- ggscatter(CEP_base_proc, x = "ind_disp_reg_eco", y = "ind_nota_gob",
                     add = "reg.line",
                     cor.coef = TRUE)
 
-png("/cloud/project/output/graphs/graf_3.png")
+png("../project/output/graphs/graf_3.png")
 plot(graf_3)
 dev.off()
 
@@ -172,19 +173,19 @@ tab_df(tabla_2, alternate.rows = TRUE, title = "Tabla 2. Modelo de regresión m�
        dv.labels = c("Modelo 1", "Modelo 2"),
        string.pred = "Predictores",
        string.est = "β", 
-       file = "/cloud/project/output/tables/tabla_2.html")
+       file = "../project/output/tables/tabla_2.html")
 
-webshot("/cloud/project/output/tables/tabla_2.html", "/cloud/project/output/tables/tabla_2.png")
+webshot("output/tables/tabla_2.html", "output/tables/tabla_2.png")
 
 # ---- Parte 5: Tabla de error ----
 
 graf_4 <- sjPlot::plot_model(reg_2,ci.lvl = c(0.95), title = "Gráfico 5. Modelo 2, coeficiente de regresión e intervalos de confianza",vline.color = "grey",line.size = 1)
 
-png("/cloud/project/output/graphs/gráfico_4.png")
+png("../project/output/graphs/gráfico_4.png")
 plot(graf_4)
 dev.off()
 
-save.image("/cloud/project/input/data/proc/CEP_base_proc.RData")
+save.image("../project/input/data/proc/CEP_base_proc.RData")
 
 # ---- Nota final: Información de la sesión de R ----
 sessionInfo()
