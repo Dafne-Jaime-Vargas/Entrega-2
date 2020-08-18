@@ -32,7 +32,7 @@ options(scipen=999) # valores sin notación científica
 # ---- Parte 2: cargamos la base de datos ---- 
 
 
-load("input/data/original/Encuesta_CEP.RData")
+load("../project/input/data/original/Encuesta_CEP.RData")
 
 
 # ---- Parte 3: selección de variables a utilizar ---- 
