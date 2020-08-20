@@ -80,8 +80,8 @@ M <- CEP_base_proc %>% # se especifica la base de datos
   select(ind_nota_gob, ind_disp_reg_eco, posicion_soc, Edad)  # se seleccionan las variables
 
 
-tab_corr(M,
-         triangle = "lower", 
+tab_corr(M,                                       #dependiendo de la versión puede ser sjt.corr
+         triangle = "lower",   
          title = "Tabla de correlación", 
          file = "output/tables/tabla_corr.html")
 
@@ -141,7 +141,9 @@ reg_1 <-lm((ind_nota_gob ~ identidad_pol_Centro + identidad_pol_Izquierda + iden
 reg_1
 
 
-sjPlot::tab_model(list(reg_1), show.ci=FALSE, p.style = "stars",string.pred = "Predictores", string.est = "β",digits = 3,
+sjPlot::tab_model(list(reg_1), show.ci=FALSE, 
+                  p.style = "stars", #dependiendo de la versión puede ser asterisk
+                  string.pred = "Predictores", string.est = "β",digits = 3,
                   dv.labels = c("Modelo 1"))
 
 # ---- 4.3 Tabla Regresión Múltiple con variables de control ----
@@ -150,7 +152,9 @@ reg_2 <-lm((ind_nota_gob ~ identidad_pol_Centro + identidad_pol_Izquierda + iden
 reg_2
 
 
-sjPlot::tab_model(list(reg_2), show.ci=FALSE, p.style = "stars",string.pred = "Predictores", string.est = "β",digits = 3,
+sjPlot::tab_model(list(reg_2), show.ci=FALSE, 
+                  p.style = "stars", #dependiendo de la versión puede ser asterisk
+                  string.pred = "Predictores", string.est = "β",digits = 3,
                   dv.labels = c("Modelo 4"))
 
 # ---- 4.3 Tabla Regresión Múltiple para presentar (con y sin variables de control) ----
@@ -160,7 +164,7 @@ tabla_2 <- sjPlot::tab_model(list(reg_1, reg_2),
                              show.se=TRUE,
                              show.ci=FALSE,
                              digits=3,
-                             p.style = "stars",
+                             p.style = "stars", #dependiendo de la versión puede ser asterisk
                              dv.labels = c("Modelo 1", "Modelo 2"),
                              string.pred = "Predictores",
                              string.est = "β")
@@ -169,7 +173,7 @@ tabla_2 <- sjPlot::tab_model(list(reg_1, reg_2),
 tab_df(tabla_2, alternate.rows = TRUE, title = "Tabla 2. Modelo de regresión múltiple", show.se=TRUE,
        show.ci=FALSE,
        digits=3,
-       p.style = "stars",
+       p.style = "stars", #dependiendo de la versión puede ser asterisk
        dv.labels = c("Modelo 1", "Modelo 2"),
        string.pred = "Predictores",
        string.est = "β", 
