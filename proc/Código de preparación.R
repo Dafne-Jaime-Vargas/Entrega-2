@@ -109,6 +109,7 @@ get_label(CEP$identidad_pol) # Visualizar
 
 CEP$identidad_pol <- factor(CEP$identidad_pol, labels=c("Derecha","Centro","Izquierda", "Ninguno"))
 na.omit(CEP$identidad_pol)
+
 # ---- Revisión final ----
 
 frq(CEP$identidad_pol)
@@ -342,7 +343,7 @@ frq(CEP$ind_disp_reg_eco)
 
 CEP_base_descriptivo <- CEP %>% select (ind_nota_gob, identidad_pol, ind_disp_reg_eco, posicion_soc, sexo, nivel_educ, Edad)
 CEP_base_descriptivo <- CEP_base_descriptivo %>% rename(Indice_nota_gobierno=ind_nota_gob, Identidad_politica = identidad_pol, Indice_disposicion_regularización_economica=ind_disp_reg_eco, Posicion_social=posicion_soc, Sexo=sexo, Nivel_Educacional=nivel_educ, Edad=Edad)
-view(dfSummary(CEP_base_descriptivo, headings=FALSE) )
+view(dfSummary(CEP_base_descriptivo, headings=FALSE, method = "render") )
 
 sink("output/tables/table1.txt")
 dfSummary(CEP_base_descriptivo, headings = FALSE, method = "render")
@@ -381,6 +382,8 @@ stargazer(CEP, type="text")
 
 CEP_base_proc <- CEP
 CEP_original <- Encuesta_CEP
+
+na.omit(CEP_base_proc)
 
 save.image("../project/input/data/original/CEP_original.RData")
 
