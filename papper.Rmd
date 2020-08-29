@@ -319,21 +319,21 @@ sjPlot::tab_model(list(reg_3, reg_4),
 
 ## 7.3 Homocedasticidad
 
-Para la revisión del presente supuesto, se utilizará en primer lugar el test Breush- Pagan, el cual nos arroja un valor p<0.05 [p=0.0006], por lo que se podría afirmar que el modelo no cumple con el supuesto y es heterocedástico al rechazar la H0, en la cual se asume que la varianza del error era constante.
+Para la revisión del presente supuesto, se utilizará en primer lugar el test Breush - Pagan, el cual nos arroja un valor p<0.05 [p=0.0006], por lo que se podría afirmar que el modelo no cumple con el supuesto y es heterocedástico al rechazar la H0, en la cual se asume que la varianza del error era constante.
 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 lmtest::bptest(reg_3)
 ```
 
-Para reafirmar lo anterior, se utiliza también el test de Cook-Weisberg, el que corrobora los resultados de la prueba estadística anterior al arrojar valores p<0.05 [p=0.026], confirmando el rechazo de nuestra H0 y la existencia de heterocedasticidad en el modelo. En base a esto es que se realizará el cálculo de errores estándares robustos, para estimar nuestro modelo
+Para reafirmar nuestra primera afirmación, se utiliza el test de Cook-Weisberg, el que corrobora los resultados de la prueba estadística anterior al arrojar valores p<0.05 [p=0.026], confirmando el rechazo de nuestra H0 y la existencia de heterocedasticidad en el modelo. En base a esto es que se realizará el cálculo de errores estándares robustos, para estimar nuestro modelo.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 car::ncvTest(reg_3)
 
 ```
 
-La tabla 6 nos muestra la creación de un modelo con errores estándares robustos, lo cual evidencia un mantención en la significancia estadística, lo que implica que nuestras estimaciones son robustas ante la presencia de heterocedasticidad en los residuos, por lo que se continuará con el tercer modelo.
+La tabla 6 nos muestra la creación de un modelo con errores estándares robustos, lo cual evidencia una mantención en la significancia estadística, lo que implica que nuestras estimaciones son robustas ante la presencia de heterocedasticidad en los residuos, por lo que se continuará con el tercer modelo.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 htmlreg(list(reg_3, model_robust), doctype = FALSE, p.style = "stars", caption = "Tabla 6. Modelo de regresión con errores robustos", custom.model.names = c("Modelo 4","Modelo 4Robust"), custom.coef.names = labs04)
