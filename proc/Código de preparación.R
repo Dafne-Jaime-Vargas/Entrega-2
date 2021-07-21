@@ -55,21 +55,17 @@ CEP <- Encuesta_CEP %>% select(MB_P14, #posición política
                                DS_P2_EXACTA) #Edad
 
 
-names(CEP)
+names(CEP) 
 
 CEP <- sjlabelled::remove_all_labels(CEP)
 
 
-# ---- Parte 4: procesamiento de variables ---- 
+# ---- Parte 4: procesamiento de variables --------- 
 
 # El flujo de trabajo es el siguiente: 
-
 #a. Descriptivo general
-
 #b. Recodificación: de casos perdidos y otros valores (en caso necesario)
-
 #c. Etiquetado: cambio de nombres de variables y valores (en caso necesario)
-
 #d. Otros ajustes
 
 
