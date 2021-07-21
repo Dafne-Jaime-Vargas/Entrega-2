@@ -89,6 +89,8 @@ CEP <- sjlabelled::remove_all_labels(CEP)
 
 frq(CEP$MB_P14)
 
+
+
 # ---- B. Recodificación ----
 
 CEP$MB_P14 <- car::recode(CEP$MB_P14, "c(8, 9)=NA")
